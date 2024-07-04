@@ -1,0 +1,58 @@
+1.why react js?
+react js is a javascript Library 
+component based architecture-- resuablity and maintainable to easier to debug
+virtual dom --faster rendering --update only where the parts are changed
+Unidirectional Data flow: 
+
+2.What is UseState?
+state is away to store and manage information in component that can change over time
+
+it is a hook provided by react to enable state in functional component
+
+
+3.What is hoisting?
+variable and fucntion   declarations are moved to the top of their scoped during compiled phasee
+  variabel:
+  console.log(x); // Output: undefined
+var x = 5;
+console.log(x); // Output: 5
+
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+The declaration let y is hoisted, but it's in a "temporal dead zone" until the actual declaration is encountered, leading to a ReferenceError.
+
+4.use Strict
+secure code , human error / It prevents the use of undeclared variables, disallows duplicate parameter names,  dont reffer window object
+
+"use strict"
+
+let x=10;    x=10
+console.log(x)
+
+5. difference between  === && ==
+
+== is compare the value
+=== is compare value and data type
+
+6.what is difference between let var and const?
+
+var is functional scope and it has hoisting
+where as let is block level scope
+const is block level scoep and while declare it must be instiallised
+
+7. event loop?
+it is a single threaded ,non-blocking asynchronous concurrent language  means handle multiple operation at the same time despite have single threaded
+call stack--synchronous  code--tract function call , when functionis called added to stack when its is completed it is removed from the stack
+
+
+web api: asynchronous operation --example setTimeout
+
+callback queue --whe an asynchronous operation is completed its callback function is added to callback quess
+
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Timeout callback');
+}, 2000);
+
+console.log('End');
