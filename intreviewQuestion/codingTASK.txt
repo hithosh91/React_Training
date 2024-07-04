@@ -1,0 +1,99 @@
+task 1:
+const Arr= [2,3,3,4,4,1,5,5,5] 
+Print the no of times each number is occurring and remove duplicates from it
+
+soultion:
+
+let arr= [2,3,3,4,4,1,5,5,5,7,9] 
+ function duplicate(arr){
+     var data={}
+     for(var i=0;i<arr.length;i++){
+         if(!data[arr[i]]){
+             data[arr[i]]=1
+         }
+         else{
+             data[arr[i]]=data[arr[i]]+1
+         }
+     }
+     for(var key in data){
+         if(data[key] ==1){
+             console.log(key )
+         }
+     }
+     return data
+ }
+
+console.log(duplicate(arr));
+
+
+Task 2: print highest and lowest element in array
+
+const arr=[2,3,4,5,5,1,9,322,11,54255]
+
+Heighest number:
+const Heihtest=(Arr)=>{
+  
+  let heghest=Arr[0];
+  
+  for(let i=0;i<=Arr.length-1;i++){
+    
+    if(heghest<Arr[i]){
+      heghest=Arr[i]
+    }
+  }
+  
+  return heghest;
+}
+
+console.log(Heihtest(Arr));
+
+lowest:
+
+const Arr=[2,3,4,5,5,1,9,322,11,54255]
+
+const Lowest=(Arr)=>{
+  
+  let Least=Arr[0];
+  
+  for(let i=0;i<=Arr.length-1;i++){
+    
+    if(Least>Arr[i]){
+      Least=Arr[i]
+    }
+  }
+  
+  return Least;
+}
+
+console.log(Lowest(Arr));
+
+
+task3:  find the second highest and lowest
+arr=[-1,2,4,5,4,3,-4]
+    let highest = -Infinity;
+let secondHighest = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > highest) {
+        secondHighest = highest;
+        highest = arr[i];
+    } else if (arr[i] > secondHighest && arr[i] < highest) {
+        secondHighest = arr[i];
+    }
+}
+
+console.log(secondHighest);
+
+let lowest = Infinity;
+let secondLowest =Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < lowest) {
+        secondLowest = lowest;
+        lowest = arr[i];
+    } else if (arr[i] < secondLowest && arr[i] > lowest) {
+        secondLowest = arr[i];
+    }
+}
+
+    console.log(lowest);
