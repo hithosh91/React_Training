@@ -97,3 +97,41 @@ for (let i = 0; i < arr.length; i++) {
 }
 
     console.log(lowest);
+
+
+    task3:
+    write a programe to reverse a string
+     a="hello world";
+
+var reverseWords = function(s) {
+
+    let reverse="";
+    for(let i=s.length-1;i>=0;i--){
+
+        reverse+=s[i];
+
+        
+    }
+    return reverse;
+}
+
+reverse a string:
+
+
+o/p: indian a am i world Hello
+
+const reverseString=(str)=>{
+
+    let splitword=str.split(" ");
+
+    let result=" " ;
+    for(let i=str.lenght-1;i>=0;i--){
+        if(str[i]){
+            result+=(result?" ":"")+str[i];
+        }
+
+    }
+    return result;
+}
+
+console.log(result);
