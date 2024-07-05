@@ -135,3 +135,10 @@ const reverseString=(str)=>{
 }
 
 console.log(result);
+
+task6:
+var str=""
+str?console.log("yes"):console.log("No")
+var str=" "
+str?console.log("yes"):console.log("No")
+

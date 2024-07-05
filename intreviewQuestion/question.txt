@@ -56,3 +56,26 @@ setTimeout(() => {
 }, 2000);
 
 console.log('End');
+
+8.rest and spread operator?
+9.call blind and apply
+
+var str=""
+str?console.log("yes"):console.log("No")
+var str=" "
+str?console.log("yes"):console.log("No")
+Sachin Kulkarni
+7:09 PM
+let obj = { x: 10, y: 20 };
+let { x, z = 30 } = obj;
+console.log(x, z);
+
+setTimeout(() => {
+  console.log("Hello from setTimeout");
+}, 0);
+console.log("This will be logged first");
+Sachin Kulkarni
+7:12 PM
+let numbers = [1, 2, 3, 4, 5];
+
+numbers=numbers.map(num => num * 2)
