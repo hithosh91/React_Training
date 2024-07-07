@@ -1,0 +1,165 @@
+1. Block-Scoped Variables: let and const
+let: Declares block-scoped variables, which are limited to the block, statement, or expression in which they are used.
+
+javascript
+Copy code
+let a = 10;
+if (a === 10) {
+  let b = 20;
+  console.log(b); // 20
+}
+console.log(b); // ReferenceError: b is not defined
+const: Declares block-scoped constants, which cannot be reassigned after their initial declaration.
+
+javascript
+Copy code
+const a = 10;
+a = 20; // TypeError: Assignment to constant variable.
+2. Arrow Functions
+Arrow functions provide a concise syntax for writing function expressions and automatically bind the this value.
+
+javascript
+Copy code
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+3. Template Literals
+Template literals allow for embedded expressions and multi-line strings, enhancing readability and ease of string manipulation.
+
+javascript
+Copy code
+const name = 'Alice';
+const greeting = `Hello, ${name}!`;
+console.log(greeting); // Hello, Alice!
+4. Default Parameters
+Default parameters allow function parameters to have default values if no value or undefined is passed.
+
+javascript
+Copy code
+function greet(name = 'Guest') {
+  return `Hello, ${name}!`;
+}
+console.log(greet()); // Hello, Guest!
+console.log(greet('Alice')); // Hello, Alice!
+5. Destructuring Assignment
+Destructuring assignment allows for unpacking values from arrays or properties from objects into distinct variables.
+
+Array Destructuring:
+
+javascript
+Copy code
+const [a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+Object Destructuring:
+
+javascript
+Copy code
+const { name, age } = { name: 'Alice', age: 30 };
+console.log(name); // Alice
+console.log(age); // 30
+6. Rest and Spread Operators
+Rest Operator: Collects all remaining elements into an array.
+
+javascript
+Copy code
+function sum(...args) {
+  return args.reduce((total, num) => total + num, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+Spread Operator: Spreads elements of an iterable (like an array) or properties of an object.
+
+javascript
+Copy code
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+console.log(arr2); // [1, 2, 3, 4]
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 };
+console.log(obj2); // { a: 1, b: 2, c: 3 }
+7. Classes
+ES6 introduced a new syntax for creating objects and dealing with inheritance, making JavaScript more similar to traditional class-based object-oriented languages.
+
+javascript
+Copy code
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+const alice = new Person('Alice', 30);
+console.log(alice.greet()); // Hello, my name is Alice and I am 30 years old.
+8. Promises
+Promises provide a way to handle asynchronous operations more efficiently and cleanly.
+
+javascript
+Copy code
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data fetched');
+    }, 1000);
+  });
+};
+
+fetchData().then(data => {
+  console.log(data); // Data fetched
+}).catch(error => {
+  console.error(error);
+});
+9. Modules
+ES6 introduced a module system to manage dependencies and organize code.
+
+Exporting:
+
+javascript
+Copy code
+// module.js
+export const name = 'Alice';
+export function greet() {
+  return `Hello, ${name}!`;
+}
+Importing:
+
+javascript
+Copy code
+// main.js
+import { name, greet } from './module.js';
+console.log(greet()); // Hello, Alice!
+10. Enhanced Object Literals
+ES6 introduced several shorthand syntaxes for object literals.
+
+Property Shorthand:
+
+javascript
+Copy code
+const name = 'Alice';
+const age = 30;
+const person = { name, age };
+console.log(person); // { name: 'Alice', age: 30 }
+Method Shorthand:
+
+javascript
+Copy code
+const person = {
+  name: 'Alice',
+  greet() {
+    return `Hello, ${this.name}!`;
+  }
+};
+console.log(person.greet()); // Hello, Alice!
+11. Iterators and For-of Loop
+The for-of loop provides a simpler way to iterate over arrays, strings, and other iterable objects.
+
+javascript
+Copy code
+const array = [1, 2, 3];
+for (const value of array) {
+  console.log(value); // 1, 2, 3
+}
