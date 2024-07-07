@@ -60,22 +60,101 @@ console.log('End');
 8.rest and spread operator?
 9.call blind and apply
 
-var str=""
+10.var str=""
 str?console.log("yes"):console.log("No")
 var str=" "
 str?console.log("yes"):console.log("No")
-Sachin Kulkarni
-7:09 PM
+12.
 let obj = { x: 10, y: 20 };
 let { x, z = 30 } = obj;
 console.log(x, z);
-
+13.
 setTimeout(() => {
   console.log("Hello from setTimeout");
 }, 0);
 console.log("This will be logged first");
-Sachin Kulkarni
-7:12 PM
+13.
 let numbers = [1, 2, 3, 4, 5];
 
 numbers=numbers.map(num => num * 2)
+
+
+
+14.
+console.log(x);
+var x = 10;
+15.
+function test() {
+  console.log(y);
+  var y = 5;
+}
+test();
+function test() {
+  console.log(x);
+  var x;
+  x = 5;
+}
+test();
+16.
+console.log(a);
+function a() {
+  console.log("Inside a");
+}
+17.
+function outer() {
+  var x = 10;
+  function inner() {
+    console.log(x);
+  }
+  inner();
+}
+outer();
+18.
+function outer() {
+  var x = 10;
+  function inner() {
+     var y=9
+    console.log(x);
+  }
+  inner();
+  console.log(y)
+}
+outer();
+
+
+console.log(x); // Output: undefined
+console.log(y); // Output: ReferenceError
+
+var x = 10;
+let y = 20;
+
+19.
+const person = {
+    name: 'Alice',
+    greet: function() {
+        console.log('Hello, my name is ' + this.name);
+    }
+};
+person.greet();
+20.
+console.log(this)
+const person = {
+    name: 'Alice',
+    greet: function() {
+        console.log('Hello, my name is ' + this.name);
+    }
+};
+
+21.
+person.greet();
+
+
+function greet() {
+    console.log(this); 
+greet()
+22.
+function Person(name) {
+    this.name = name;
+}
+const person1 = new Person('Bob');
+console.log(person1.name); // Output: Bob
