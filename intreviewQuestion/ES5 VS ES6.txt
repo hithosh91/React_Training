@@ -163,3 +163,5 @@ const array = [1, 2, 3];
 for (const value of array) {
   console.log(value); // 1, 2, 3
 }
+
+https://www.w3schools.com/jsref/jsref_object_keys.asp
