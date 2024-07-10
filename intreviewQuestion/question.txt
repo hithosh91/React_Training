@@ -217,3 +217,32 @@ const person = {
 
 button.addEventListener('click', person.sayHello.bind(person));
 In this code, when the button is clicked, sayHello is called with this correctly set to person, 
+
+
+(function() {
+  // Function body
+})();
+
+
+
+
+(function(name ) {
+  var message = "Hello from IIFE";
+  console.log(message,name); 
+})("Hitosh");
+
+
+function foo1(){
+  return {
+      bar: "hello"
+  };
+}
+
+console.log(foo1());
+function foo2()
+{
+  return {
+      bar: "hello"
+  };
+}
+console.log(foo2());
