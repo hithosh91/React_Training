@@ -249,3 +249,84 @@ console.log(foo2());
 
 
 
+----
+console.log(1 + "2" + "2");--"122"
+console.log(1 + +"2" + "2");--"32" ----++ convert next number into 
+console.log(1 + -"1" + "2");--"02"
+console.log(+"1" + "1" + "2");"112"
+
+
+
+12.
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+o/p:333
+i want to change 123
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+
+
+13.
+function App() { 
+    const [count, setCount] = React.useState(0); 
+    React.useEffect(() => { setCount(count + 1); }, []);
+    return <div>{count}</div>; }
+
+
+14:
+const obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3
+  }
+};
+const newObj = {...obj};
+newObj.c.d = 4;
+console.log(obj.c.d);
+
+primitive: var , boolean --pass by value --stack
+non premitieve: array ,  -- pass by ref  ---heap
+
+15:
+console.log(typeof typeof 1);
+o/p:string
+
+15:
+
+function App() {
+  return (
+    <div>
+      {true && 'Hello'}
+      {false && 'World'}
+      {null && 'React'}
+    </div>
+  );
+}
+
+o/p:both && true   ===hello
+
+
+function App() {
+  return (
+    <div>
+      {true ||'Hello'}
+      {false ||'World'}
+      {null || 'React'}
+    </div>
+  );
+}
+
+
+16:
+let a = 3;
+let b = new Number(3);
+console.log(a == b);
+console.log(a === b);
+
+true/false
+17:
+console.log([] == ![]);
+
